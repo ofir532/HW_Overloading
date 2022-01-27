@@ -1,4 +1,6 @@
 ﻿using System;
+using static System.Console;
+
 
 namespace HW_Overloading_07
 {

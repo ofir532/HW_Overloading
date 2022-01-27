@@ -9,8 +9,8 @@ namespace HW_Overloading_08
 {
     internal class Computer
     {
-        private string[] allOpenFiles = null;
-        private bool isTurnOn;
+        public string[] allOpenFiles = null;
+        public bool isTurnOn;
 
         public Computer(string[] allOpenFiles)
         {
@@ -19,17 +19,13 @@ namespace HW_Overloading_08
         }
         public void TurnOff()
         {
-            for (int i = 0; i < allOpenFiles.Length; i++)
-            {
-                this.allOpenFiles[i] = null;
-            }
+            this.allOpenFiles = null;
             this.isTurnOn = false;
             WriteLine("The computer is turned off");
         }
         public void TurnOff(bool force)
         {
-            bool isEmpty = allOpenFiles.All(x => !x.Equals(null));
-            if (force || (!force && (allOpenFiles.Length == 0 || allOpenFiles == null || isEmpty)))
+            if (force || (!force && allOpenFiles == null))
             {
                 TurnOff();
                 return;
@@ -39,7 +35,7 @@ namespace HW_Overloading_08
         public void TurnOn()
         {
             this.isTurnOn = true;
-            WriteLine("The computer is not turned on");
+            WriteLine("The computer is turned on");
         }
     }
 }
