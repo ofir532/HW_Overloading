@@ -11,7 +11,6 @@ namespace HW_Overloading_08
     {
         public string[] allOpenFiles = null;
         public bool isTurnOn;
-
         public Computer(string[] allOpenFiles)
         {
             this.allOpenFiles = allOpenFiles;

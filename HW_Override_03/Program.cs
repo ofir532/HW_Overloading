@@ -7,7 +7,22 @@ namespace HW_Override_03
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Vehicle onlyBase = new Vehicle();
+            Vehicle baseWithCar = new Car();
+            Vehicle baseWithMotor = new Motorcycle();
+            Car onlyCar = new Car();
+            Motorcycle onlyMotor = new Motorcycle();
+            onlyBase.AddWheel();
+            baseWithCar.AddWheel();
+            baseWithMotor.AddWheel();
+            onlyCar.AddWheel();
+            onlyMotor.AddWheel();
+            WriteLine("----------------------------");
+            onlyBase.OpenOrClosrRoof();
+            baseWithCar.OpenOrClosrRoof();
+            baseWithMotor.OpenOrClosrRoof();
+            onlyCar.OpenOrClosrRoof();
+            onlyMotor.OpenOrClosrRoof();
         }
     }
 }
